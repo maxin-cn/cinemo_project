@@ -278,20 +278,18 @@
       </div>
     
     <p style="font-size: 1.4em" class="serif">
-        Image animation aims to generate dynamic visual content from input static images. 
-        Diffusion models have become mainstream in image animation research due to their powerful generative capabilities, 
-        achieving remarkable success. However, maintaining consistency with the detailed information of the input static image over time 
-        (such as style, background, and object of the input static image) and ensuring smoothness in animated video narratives guided 
-        by textual prompts remain considerable challenges. In this paper, we propose a novel method called Cinemo, 
-        which can perform motion-controllable image animation with strong consistency. 
-        Our method introduces a novel framework focused on understanding the distribution of motion residuals, 
-        rather than directly generating subsequent frames. 
-        Additionally, an effective method based on the structural similarity index is proposed to control the motion intensity. 
-        Furthermore, we propose noise refinement based on discrete cosine transform to ensure layout consistency. 
-        These three strategies help Cinemo generate highly consistent and motion-controlled image animation results. 
-        Compared to previous methods, Cinemo offers simpler and more precise user control and better generative performance. 
-        Extensive experiments against several baseline methods, including both commercial tools and research approaches, 
-        across multiple metrics, underscore the effectiveness and superiority of our proposed approach.
+        Diffusion models have achieved great progress in image animation due to powerful generative capabilities. 
+        However, maintaining spatio-temporal consistency with detailed information from the input static image over time (e.g., style, background, and objects in the input static image) 
+        and ensuring motion smoothness in animated video narratives guided by textual prompts still remains challenging. 
+        In this paper, we introduce Cinemo, a novel image animation approach towards achieving better image consistency and motion smoothness. 
+        In general, we propose two effective strategies at the training and inference stages of Cinemo to accomplish our goal. 
+        At the training stage, Cinemo focuses on learning the distribution of motion residuals, 
+        rather than directly predicting subsequent via a motion diffusion model. 
+        At the inference stage, a noise refinement technique based on discrete cosine transformation is introduced to mitigate sudden motion changes. 
+        Such strategies enable Cinemo to produce highly consistent, smooth, and motion-controllable results. 
+        Compared to previous methods, Cinemo offers simpler and more precise user controllability. 
+        Extensive experiments against several state-of-the-art methods, 
+        including both commercial tools and research approaches, across multiple metrics, demonstrate the effectiveness and superiority of our proposed approach.
 
     
 </div>
