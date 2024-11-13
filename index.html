@@ -155,13 +155,13 @@
     <div class="col">
       
       <!-- Case 1 Image -->
-      <img class="case-image" src="static/teaser/flowers_swaying/0.jpg" alt="Case 1 Image" style="width: 100%;">
+      <img class="case-image" src="static/teaser/cat_waving_its_head/0.jpg" alt="Case 1 Image" style="width: 100%;">
     </div>
     <div class="col">
       
       <!-- Case 1 Video -->
       <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
-        <source src="static/teaser/flowers_swaying/flowers_swaying.mp4" type="video/mp4">
+        <source src="static/teaser/cat_waving_its_head/cat_waving_its_head.mp4" type="video/mp4">
       </video>
     </div>
     <div class="col">
@@ -193,7 +193,7 @@
   <div class="row">
 
     <div class="head">
-      <h3>"Flowers Swaying"</h3>
+      <h3>"Cat Waving its Head"</h3>
     </div>
 
     <div class="head">
@@ -261,6 +261,61 @@
 
   </div>
 
+  <div class="row">
+    <div class="col">
+      
+      <!-- Case 1 Image -->
+      <img class="case-image" src="static/teaser/doggy_barking/0.jpg" alt="Case 1 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      
+      <!-- Case 1 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="static/teaser/doggy_barking/doggy_barking.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      
+      <!-- Case 2 Image -->
+      <img class="case-image" src="static/teaser/man_walking_on_the_road/0.jpg" alt="Case 2 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      
+      <!-- Case 2 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="static/teaser/man_walking_on_the_road/man_walking_on_the_road.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      
+      <!-- Case 3 Image -->
+      <img class="case-image" src="static/teaser/giraffe_walking/0.jpg" alt="Case 5 Image" style="width: 100%;">
+    </div>
+    <div class="col">
+      
+      <!-- Case 3 Video -->
+      <video class="clickplay case-video" width="100%" style="max-width: 100%;" autoplay loop>
+        <source src="static/teaser/giraffe_walking/giraffe_walking.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="head">
+      <h3>"Doggy Barking"</h3>
+    </div>
+
+    <div class="head">
+      <h3>"Man Walking on the Road"</h3>
+    </div>
+    
+    <div class="head">
+      <h3>"Giraffe Walking"</h3>
+    </div>
+
+  </div>
+
 </p>
 
   
@@ -278,18 +333,15 @@
       </div>
     
     <p style="font-size: 1.4em" class="serif">
-        Diffusion models have achieved great progress in image animation due to powerful generative capabilities. 
-        However, maintaining spatio-temporal consistency with detailed information from the input static image over time (e.g., style, background, and objects in the input static image) 
-        and ensuring motion smoothness in animated video narratives guided by textual prompts still remains challenging. 
-        In this paper, we introduce Cinemo, a novel image animation approach towards achieving better image consistency and motion smoothness. 
-        In general, we propose two effective strategies at the training and inference stages of Cinemo to accomplish our goal. 
-        At the training stage, Cinemo focuses on learning the distribution of motion residuals, 
-        rather than directly predicting subsequent via a motion diffusion model. 
-        At the inference stage, a noise refinement technique based on discrete cosine transformation is introduced to mitigate sudden motion changes. 
-        Such strategies enable Cinemo to produce highly consistent, smooth, and motion-controllable results. 
-        Compared to previous methods, Cinemo offers simpler and more precise user controllability. 
-        Extensive experiments against several state-of-the-art methods, 
-        including both commercial tools and research approaches, across multiple metrics, demonstrate the effectiveness and superiority of our proposed approach.
+        Diffusion models have achieved significant progress in the task of image animation due to the powerful generative capabilities. 
+        However, preserving appearance consistency to the static input image, and avoiding abrupt motion change in the generated animation, remains challenging. 
+        In this paper, we introduce Cinemo, a novel image animation approach that aims at achieving better appearance consistency and motion smoothness. 
+        The core of Cinemo is to focus on learning the distribution of motion residuals, rather than directly predicting frames as in existing diffusion models. 
+        During the inference, we further mitigate the sudden motion changes in the generated video by introducing a novel DCT-based noise refinement strategy. 
+        To counteract the over-smoothing of motion, we introduce a dynamics degree control design for better control of the magnitude of motion.
+        Altogether, these strategies enable Cinemo to produce highly consistent, smooth, and motion-controllable results. 
+        Extensive experiments comparing with several state-of-the-art methods demonstrate the effectiveness and superiority of our proposed approach. 
+        At the end, we also demonstrates how our model can be applied for motion transfer or video editing of any given video. 
 
     
 </div>
@@ -401,7 +453,7 @@
   </p>
   <p style="text-align:left; font-size: 1.6em; font-weight: bold" class="serif">Motion intensity controllability</p>
   <p style="font-size: 1.4em" class="serif">
-    We demonstrate that our method can finely control the motion intensity of animated videos. The prompt is "shark swimming".
+    We demonstrate that our method can finely control the motion intensity of animated videos. The prompts are "shark swimming" and "car moving", respectively.
   </p>
   <font size="+1">
     <p class="serif" style="color: red; font-weight: bold">Click to play the following animations!</p>
@@ -419,46 +471,43 @@
       <h3>b=0</h3>
     </div>
     <div class="col-gallery" style="width: 20%;">
-      <video class="clickplay" width="100%" autoplay loop>
-        <source src="static/motion_bucket/0003.mp4" type="video/mp4">
-      </video>
-      <h3>b=3</h3>
-    </div>
+        <video class="clickplay" width="100%" autoplay loop>
+          <source src="static/motion_bucket/0009.mp4" type="video/mp4">
+        </video>
+        <h3>b=9</h3>
+      </div>
     <div class="col-gallery" style="width: 20%;">
-      <video class="clickplay" width="100%" autoplay loop>
-        <source src="static/motion_bucket/0006.mp4" type="video/mp4">
-      </video>
-      <h3>b=6</h3>
-    </div>
+        <video class="clickplay" width="100%" autoplay loop>
+          <source src="static/motion_bucket/0018.mp4" type="video/mp4">
+        </video>
+        <h3>b=18</h3>
+      </div>
   </div>
 
   <div class="row">
     <div class="col-gallery" style="width: 20%;">
-      <video class="clickplay" width="100%" autoplay loop>
-        <source src="static/motion_bucket/0009.mp4" type="video/mp4">
-      </video>
-      <h3>b=9</h3>
+      <img src="static/motion_bucket2/0.jpg" style="width: 100%;">
+      <h3>Input Image</h3>
     </div>
     <div class="col-gallery" style="width: 20%;">
       <video class="clickplay" width="100%" autoplay loop>
-        <source src="static/motion_bucket/0012.mp4" type="video/mp4">
+        <source src="static/motion_bucket2/0000.mp4" type="video/mp4">
       </video>
-      <h3>b=12</h3>
+      <h3>b=0</h3>
     </div>
     <div class="col-gallery" style="width: 20%;">
-      <video class="clickplay" width="100%" autoplay loop>
-        <source src="static/motion_bucket/0015.mp4" type="video/mp4">
-      </video>
-      <h3>b=15</h3>
-    </div>
-    <div class="col-gallery" style="width: 20%;">
-      <video class="clickplay" width="100%" autoplay loop>
-        <source src="static/motion_bucket/0018.mp4" type="video/mp4">
-      </video>
-      <h3>b=18</h3>
-    </div>
+        <video class="clickplay" width="100%" autoplay loop>
+          <source src="static/motion_bucket2/0009.mp4" type="video/mp4">
+        </video>
+        <h3>b=9</h3>
+      </div>
+      <div class="col-gallery" style="width: 20%;">
+        <video class="clickplay" width="100%" autoplay loop>
+          <source src="static/motion_bucket2/0018.mp4" type="video/mp4">
+        </video>
+        <h3>b=18</h3>
+      </div>
   </div>
-
 
   <hr style="margin: 30px 0;">
 
@@ -604,12 +653,12 @@
     <!-- <img class="summary-img" src="figs/framework.jpg" style="width:100%;"> <br> -->
     <div class="row">
       <div class="col-gallery" style="width: 16.6%;">
-        <img class="case-image" src="static/gallery/big_cat_yawning/0.jpg" alt="Case 5 Image" style="width: 100%;">
+        <img class="case-image" src="static/gallery/birds_rubbing_their_beaks/0.jpg" alt="Case 5 Image" style="width: 100%;">
       </div>
       
       <div class="col-gallery" style="width: 16.6%;">
         <video class="clickplay" width="100%" autoplay loop>
-          <source src="static/gallery/big_cat_yawning/big_cat_yawning.mp4" type="video/mp4">
+          <source src="static/gallery/birds_rubbing_their_beaks/birds_rubbing_their_beaks.mp4" type="video/mp4">
         </video>
       </div>
       <!-- First Row -->
@@ -636,7 +685,7 @@
   
     <div class="row">
       <div class="head" >
-        <h3 >"Big Cat Yawning"</h3>
+        <h3 >"Birds Rubbing Their Beaks"</h3>
       </div>
       <div class="head">
         <h3>"Downward Flow of Waterfall"</h3>
@@ -782,12 +831,12 @@
     <div class="row">
       <div class="col-gallery" style="width: 16.6%;">
         
-        <img class="case-image" src="static/gallery/shark_falling_into_the_sea/0.jpg" alt="Case 5 Image" style="width: 100%;">
+        <img class="case-image" src="static/gallery/bird_walking_on_the_beach/0.jpg" alt="Case 5 Image" style="width: 100%;">
       </div>
       <!-- Third Row -->
       <div class="col-gallery" style="width: 16.6%;">
         <video class="clickplay" width="100%" autoplay loop>
-          <source src="static/gallery/shark_falling_into_the_sea/shark_falling_into_the_sea.mp4" type="video/mp4">
+          <source src="static/gallery/bird_walking_on_the_beach/bird_walking_on_the_beach.mp4" type="video/mp4">
         </video>
       </div>
 
@@ -813,7 +862,7 @@
   
     <div class="row">
       <div class="head" >
-        <h3 >"Shark Falling into the Sea"</h3>
+        <h3 >"Bird Walking on the beach"</h3>
       </div>
       <div class="head">
         <h3>"Snowman Waving His Hand"</h3>
@@ -837,11 +886,11 @@
       </div>
 
       <div class="col-gallery" style="width: 16.6%;">
-        <img class="case-image" src="static/gallery/woman_blinking/0.jpg" alt="Case 5 Image" style="width: 100%;">
+        <img class="case-image" src="static/gallery/butterfly_folding_its_wings_upward/0.jpg" alt="Case 5 Image" style="width: 100%;">
       </div>
       <div class="col-gallery" style="width: 16.6%;">
         <video class="clickplay" width="100%" autoplay loop>
-          <source src="static/gallery/woman_blinking/woman_blinking.mp4" type="video/mp4">
+          <source src="static/gallery/butterfly_folding_its_wings_upward/butterfly_folding_its_wings_upward.mp4" type="video/mp4">
         </video>
       </div>
       <div class="col-gallery" style="width: 16.6%;">
@@ -861,7 +910,7 @@
         <h3 >"Tree Swaying"</h3>
       </div>
       <div class="head">
-        <h3>"Woman Blinking"</h3>
+        <h3>"Butterfly Folding its Wings Upward"</h3>
       </div>
       <div class="head">
         <h3>"Woman Walking"</h3>
@@ -882,11 +931,11 @@
         </div>
   
         <div class="col-gallery" style="width: 16.6%;">
-          <img class="case-image" src="static/gallery/space_station_moving/0.jpg" alt="Case 5 Image" style="width: 100%;">
+          <img class="case-image" src="static/gallery/candle_flickering/0.jpg" alt="Case 5 Image" style="width: 100%;">
         </div>
         <div class="col-gallery" style="width: 16.6%;">
           <video class="clickplay" width="100%" autoplay loop>
-            <source src="static/gallery/space_station_moving/space_station_moving.mp4" type="video/mp4">
+            <source src="static/gallery/candle_flickering/candle_flickering.mp4" type="video/mp4">
           </video>
         </div>
         <div class="col-gallery" style="width: 16.6%;">
@@ -906,7 +955,7 @@
           <h3 >"Sea Swell"</h3>
         </div>
         <div class="head">
-          <h3>"Space Station Moving"</h3>
+          <h3>"Candle Flickering"</h3>
         </div>
         <div class="head">
           <h3>"Girl Dancing under the Stars"</h3>
