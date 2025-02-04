@@ -569,7 +569,8 @@
   <p style="font-size: 1.4em" class="serif">
     We demonstrate that the proposed DCTInit can stabilize the video generation process and effectively mitigate sudden motion change; 
     the DCT frequency domain decomposition method can effectively mitigate the color inconsistency issues caused by the FFT frequency domain decomposition method.
-    The first and second lines prompt "woman smiling" and "robot dancing", respectively
+    Here, "Baseline" refers to the results produced solely by motion diffusion models, without the application of any test-time improvement techniques.
+    The first and second lines prompt "woman smiling" and "robot dancing", respectively.
   </p>
 
   <div class="row">
@@ -579,10 +580,16 @@
     </div>
     <div class="col-gallery" style="width: 20%;">
       <video class="clickplay" width="100%" autoplay loop>
-        <source src="static/dct_vs_fft/woman_smiling/wo_dctinit.mp4" type="video/mp4">
+        <source src="static/dct_vs_fft/woman_smiling/baseline.mp4" type="video/mp4">
       </video>
-      <h3>WO DCTInit</h3>
+      <h3>Baseline</h3>
     </div>
+    <div class="col-gallery" style="width: 20%;">
+        <video class="clickplay" width="100%" autoplay loop>
+          <source src="static/dct_vs_fft/woman_smiling/w_fft.mp4" type="video/mp4">
+        </video>
+        <h3>FFTInit</h3>
+      </div>
     <div class="col-gallery" style="width: 20%;">
       <video class="clickplay" width="100%" autoplay loop>
         <source src="static/dct_vs_fft/woman_smiling/w_dctinit.mp4" type="video/mp4">
@@ -596,6 +603,12 @@
       <img src="static/dct_vs_fft/robot_dancing/0.jpg" style="width: 100%;">
       <h3>Input Image</h3>
     </div>
+    <div class="col-gallery" style="width: 20%;">
+        <video class="clickplay" width="100%" autoplay loop>
+          <source src="static/dct_vs_fft/robot_dancing/baseline.mp4" type="video/mp4">
+        </video>
+        <h3>Baseline</h3>
+      </div>
     <div class="col-gallery" style="width: 20%;">
       <video class="clickplay" width="100%" autoplay loop>
         <source src="static/dct_vs_fft/robot_dancing/w_fft.mp4" type="video/mp4">
